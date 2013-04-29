@@ -30,8 +30,8 @@ window.onload = function() {
 
 
 function submitCreateForm(title, input, output) {
-	var url = "http://localhost:8080/dsl/dslScript/create?=";
-	//var url = "http://dslgroovy.cloudfoundry.com/dslScript/create?=";
+	//var url = "http://localhost:8080/dsl/dslScript/create?=";
+	var url = "http://dslgroovy.cloudfoundry.com/dslScript/create?=";
 	$.post(url, {
 		title:"myScript", content:input
 	},function (data) {
@@ -55,8 +55,8 @@ $('#submitButton').bind('click', function() {
 	if (answerMap)
 	  answerMap[lastAssignement] = answer;
 	var stringAnswerMap = JSON.stringify(answerMap)
-	var url = "http://localhost:8080/dsl/dslScript/run?=";
-	//var url = "http://dslgroovy.cloudfoundry.com/dslScript/run?=";
+	//var url = "http://localhost:8080/dsl/dslScript/run?=";
+	var url = "http://dslgroovy.cloudfoundry.com/dslScript/run?=";
 	
 	$.post(url, {
 		scriptId:scriptId, lastAssignement:lastAssignement, counter:counter, answer:answer, answerMap:stringAnswerMap
